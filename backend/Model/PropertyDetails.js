@@ -2,22 +2,18 @@ const mongoose =require("mongoose")
 
 
 const PropertyDetails= new mongoose.Schema({
-    name:{
+    property:{
         type:String,
         required:true
     },
-    length:{
+    contact:{
         type:String,
         required:true
     },
-    breath:{
+    area:{
         type:String,
         required:true
-    },
-    mobileNo:{
-        type:String,
-        required:true
-    },
+    }
 
 })
 module.exports=mongoose.model("PropertyDetails",PropertyDetails)
