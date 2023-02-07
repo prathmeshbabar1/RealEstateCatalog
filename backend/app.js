@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); //imported Mongoose
 
-const url = 'mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/?retryWrites=true&w=majority'
+const url = 'mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/realestate?retryWrites=true&w=majority'
 
 mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true },
     (err)=>{if(err){ console.log(err);}
@@ -12,7 +12,7 @@ mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true },
         area:{type:String,required:true},
     })
 
-    const propertyDetails = mongoose.model("property",propertyDetailsSchema)
+    const propertyDetails = mongoose.model("propertydetails",propertyDetailsSchema)
 
     const newPropertyDetails=new propertyDetails({
         typeOfProperty:"plot",
