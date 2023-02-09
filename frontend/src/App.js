@@ -1,22 +1,18 @@
+import React from "react";
+import Index from "./signin";
 
-import React from 'react';
-import BasicInfo from './appProperty/basicInfo';
-import Sidenav from './appProperty/Sidenav';
-import UpperNav from './appProperty/UpperNav';
-import "./appProperty/Home.css"
 function App() {
-  return (<div className="home">
- <div className="side-nav">
-      <Sidenav/>
-  </div> 
-  <div className="display">
-      <UpperNav />
-      <BasicInfo/>
-  </div>
+  return (
+    <div className="App">
 
-</div>
-  
-    )
+      {/* prathmesh branch 1
+      this is surya branch
+      this is darshan p3 part */}
+      {Index}
+
+
+    </div>
+  );
 }
 
 export default App;

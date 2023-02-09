@@ -23,8 +23,8 @@ const mongoose = require('mongoose'); //imported Mongoose
         }
 
     
-    })
+    },{timestamps:true})
 
-    const propertyModel = mongoose.model('propertyDetails',propertySchema);
+    const propertymodel = mongoose.model('propertydetails',propertySchema);
 
-    module.exports=propertyModel;
+    module.exports=propertymodel;
