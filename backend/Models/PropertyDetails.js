@@ -25,6 +25,6 @@ const mongoose = require('mongoose'); //imported Mongoose
     
     },{timestamps:true})
 
-    const propertymodel = mongoose.model('propertydetails',propertySchema)
+    const propertymodel = mongoose.model('propertydetails',propertySchema);
 
     module.exports=propertymodel;
