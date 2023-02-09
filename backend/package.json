@@ -1,4 +1,5 @@
 {
+
     "name": "backend",
     "version": "1.0.0",
     "description": "RealEstateBackend",
@@ -15,5 +16,6 @@
         "mongoose": "^6.9.0",
         "nodemon": "^2.0.20"
     }
+  }
 
-}
+

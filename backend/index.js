@@ -1,10 +1,15 @@
+
 const express = require('express');
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const app=express();
+const port = '8080'
 const cors = require("cors")
-const property=require("./Routes/ExitstingProperty")
-const search=require("./Routes/Search")
+const bodyParser = require('body-parser');
+//const property=require("./Routes/ExitstingProperty")
+//const search=require("./Routes/Search")
 const loginRoutes = require('./routes/login')
 const registerRoutes = require('./routes/register');
+//const userRoutes = require("./routes/user");
 
 //connected to db
 const uri="mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/userdb?retryWrites=true&w=majority'"
@@ -22,6 +27,11 @@ mongoose.connect(uri, (err) => {
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+//user routing
+app.use("/api",userRoutes);
 
 //ppty and search routing
 app.use("/properties",property)
@@ -35,6 +45,6 @@ app.use('/*', (req, res) => {
 })
 
 //server listening
-app.listen(8080, (() => console.log('Server is running on PORT 8000')))
+app.listen(port, () => { console.log(`app is running at ${port}`); })
 
 

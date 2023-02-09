@@ -1,5 +1,4 @@
 const mongoose =require("mongoose")
-
 const PropertySchema= new mongoose.Schema({
     property:{
         type:String,
@@ -25,4 +24,3 @@ const PropertySchema= new mongoose.Schema({
 })
 const propertyModel=mongoose.model("PropertyDetails",PropertySchema)
 module.exports=propertyModel
-
