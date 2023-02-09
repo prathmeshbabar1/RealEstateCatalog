@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  background: #afeee1;
+}
+
+.home {
+  display: flex;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+/* SIDE NAVBAR START */
+.side-nav {
+  width: 19vw;
+  background-color: #afeee1;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.side-nav h1 {
+  text-align: center;
+  color: #1a1b1c;
+  font-weight: 700;
+  margin-top: 45px;
+  margin-bottom: 61px;
+}
+.side-nav p {
+  margin: 1rem 0;
+  margin-left: 46px;
+  display: flex;
+  align-items: center;
+}
+.side-nav p span{
+    padding-right: 3rem;
+    /* padding-right: 1rem; */
+}
+.blue {
+  color: #2289ff;
+}
+
+/* SIDE NAVBAR END */
+
+.display {
+  width: 81vw;
+  max-height: 99vh;
+}
+.upper-nav {
+  width: 100%;
+  height: 12%;
+  background-color: #f5f5f5;
+}
+.dashboard {
+  width: 100%;
+  height: 88%;
+  background-color: #f5f5f5;
+  margin-top: 0.2rem;
+}
+
+.upper-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #bcbcbc;
+  padding: 0 1rem;
+}
+
+.search-addProperty {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  color: #bcbcbc;
+}
+.search-bar {
+  height: 2.8rem;
+  width: 20rem;
+  border-radius: 2rem 2rem;
+  color: #bcbcbc;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.13);
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+.search-input{
+    padding-left: 2rem;
+    height: 2.8rem;
+    width: 15rem;
+    border-radius: 2rem 2rem;
+    border: none;
+    color: #bcbcbc;
+    outline: none;
+
+}
+.border-left-line{
+    border-left: 1px solid #E6E6E6;
+    font-size: 1.6rem;
+    margin-left:1rem ;
+  
+}
+.search-addProperty .add-btn {
+  height: 2.8rem;
+  border-radius: 2rem 2rem;
+  background-color: #6ab4f8;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.13);
+  width: 8.25rem;
+  border: none;
+  outline: none;
+}
+
+
+/* all property lists @@@@@ */
+.property-lists{
+    margin: 0 1rem;
+    height: 2rem;
+    background-color: #ffffff;
+    max-width: 100%;
+    border-radius: 1rem 1rem;
+}
+.property-lists ul{
+    border-radius: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.property-lists ul li{
+    padding: 1rem;
+    list-style: none;
+}
+
+ul:first-child{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+   
+    color: #284E91;
+  }
