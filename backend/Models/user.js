@@ -5,6 +5,6 @@ const mongoose = require('mongoose'); //imported Mongoose
         password:{type:String,required:true}
     },{timestamps:true})
 
-    const usermodel = mongoose.model('user',userSchema);
+    const usermodel = mongoose.model('user',userSchema)
 
     module.exports=usermodel;
