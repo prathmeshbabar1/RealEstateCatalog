@@ -5,11 +5,11 @@ const app=express();
 const port = '8080'
 const cors = require("cors")
 const bodyParser = require('body-parser');
-const property=require("./Routes/ExitstingProperty")
-const search=require("./Routes/Search")
+//const property=require("./Routes/ExitstingProperty")
+//const search=require("./Routes/Search")
 const loginRoutes = require('./routes/login')
 const registerRoutes = require('./routes/register');
-const userRoutes = require("./routes/user");
+//const userRoutes = require("./routes/user");
 
 //connected to db
 const uri="mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/userdb?retryWrites=true&w=majority'"

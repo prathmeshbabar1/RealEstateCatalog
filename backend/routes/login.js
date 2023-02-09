@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const User = require("../models/user");
+const User = require("../models/User");
 
 const { body, validationResult } = require('express-validator');
 router.get('/', body('email').isEmail(),

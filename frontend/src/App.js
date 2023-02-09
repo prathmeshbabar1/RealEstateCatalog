@@ -1,17 +1,19 @@
-import React from "react";
-import Index from "./signin";
-
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Signin from './components/LoginRegister/Signin';
+import Signup from './components/LoginRegister/Signup';
 function App() {
   return (
-    <div className="App">
-
-      {/* prathmesh branch 1
-      this is surya branch
-      this is darshan p3 part */}
-      {Index}
-
-
-    </div>
+    <>
+    {/* <Signin/>
+    <Signup/> */}
+      { <BrowserRouter>
+        <Routes>
+          { <Route path="/login" element={ <Signin /> } /> }
+          <Route path='/register' element={ <Signup /> } />
+        </Routes>
+      </BrowserRouter> }
+    </>
   );
 }
 
