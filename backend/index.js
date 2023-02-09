@@ -3,12 +3,12 @@ const express = require('express');
 const mongoose = require("mongoose");
 const app=express();
 const port = '8080'
-const cors = require("cors")
+// const cors = require("cors")
 const bodyParser = require('body-parser');
-const property=require("./Routes/ExitstingProperty")
-const search=require("./Routes/Search")
-const loginRoutes = require('./routes/login')
-const registerRoutes = require('./routes/register');
+// const property=require("./Routes/ExitstingProperty")
+// const search=require("./Routes/Search")
+// const loginRoutes = require('./routes/login')
+// const registerRoutes = require('./routes/register');
 const userRoutes = require("./routes/user");
 
 //connected to db
@@ -24,7 +24,7 @@ mongoose.connect(uri, (err) => {
 )
 
 //middlewares
-app.use(cors())
+// app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -34,12 +34,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use("/api",userRoutes);
 
 //ppty and search routing
-app.use("/properties",property)
-app.use("/search",search )
+// app.use("/properties",property)
+// app.use("/search",search )
 
-//login and register routing
-app.use('/login', loginRoutes)
-app.use('/register', registerRoutes)
+// //login and register routing
+// app.use('/login', loginRoutes)
+// app.use('/register', registerRoutes)
 app.use('/*', (req, res) => {
   res.send('Page not Found')
 })
