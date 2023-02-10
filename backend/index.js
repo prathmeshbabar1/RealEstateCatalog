@@ -12,7 +12,8 @@ const registerRoutes = require('./routes/register');
 //const userRoutes = require("./routes/user");
 
 //connected to db
-const uri="mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/userdb?retryWrites=true&w=majority'"
+const uri='mongodb://localhost/RealEstate'
+//const uri="mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/userdb?retryWrites=true&w=majority'"
 mongoose.connect(uri, (err) => {
     if (err) {
         console.log("Connection to mongodb failed")
@@ -31,15 +32,15 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 //user routing
-app.use("/api",userRoutes);
+////app.use("/api",userRoutes);
 
 //ppty and search routing
-app.use("/properties",property)
-app.use("/search",search )
+////app.use("/properties",property)
+///app.use("/search",search )
 
 //login and register routing
-app.use('/login', loginRoutes)
-app.use('/register', registerRoutes)
+app.use(loginRoutes)
+app.use( registerRoutes)
 app.use('/*', (req, res) => {
   res.send('Page not Found')
 })
