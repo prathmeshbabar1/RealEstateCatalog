@@ -8,8 +8,10 @@ import "../PropertyComponent/BasicInfo.css"
 import "../Dashboard/Home.css"
 
 
-const  PageProDetails= () => {
-
+const  PageProDetails= (props) => {
+    const handleChildData1 = (data)=>{
+        props.onData1({ area: data.area });
+    }
     return (
         <div className="home">
             <div className="side-nav">
@@ -20,7 +22,7 @@ const  PageProDetails= () => {
                 <div className='dashboard'>
 
                 <Menubar/>
-                <PropertyDetails/>
+                <PropertyDetails onData1={handleChildData1}/>
                 </div>
             </div>
 

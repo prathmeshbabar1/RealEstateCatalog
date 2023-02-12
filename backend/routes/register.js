@@ -38,27 +38,4 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// router.post("/register", async (req, resp) => {
-//   // resp.send("api is in loading.....")
-//   try {
-//       console.log(req.body)
-//       let newUser = new User(req.body)
-//       let result = await newUser.save()
-//       result = result.toObject();
-//       delete result.password
-//       // if (result) {
-//       //     Jwt.sign({result},jwtKey,{expiresIn:"1h"},(err,token)=>{
-//       //         if(err){
-//       //             resp.send({ result: "something went wrong" })
-//       //         }
-//       //         resp.send({result,auth:token})
-//       //     })
-//       // }
-//       resp.send(result)
-//       console.log(result)
-//   } catch {
-//       resp.status(400).json({ message: "'either name,email or password is missing'" })
-//   }
-// })
-
 module.exports = router;

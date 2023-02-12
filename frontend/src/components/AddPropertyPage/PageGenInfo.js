@@ -6,8 +6,10 @@ import UpperNav from '../Dashboard/UpperNav';
 import GeneralInfo from '../PropertyComponent/GeneralInfo';
 import "../PropertyComponent/BasicInfo.css"
 import "../Dashboard/Home.css"
-const  PageGenInfo= () => {
-
+const  PageGenInfo= (props) => {
+    const handleChildData = (data)=>{
+        props.onData({ contact: data.contact });
+    }
     return (
         <div className="home">
             <div className="side-nav">
@@ -17,7 +19,7 @@ const  PageGenInfo= () => {
                 <UpperNav />
                 <div className='dashboard'>
                 <Menubar/>
-                <GeneralInfo/>
+                <GeneralInfo onData={handleChildData}/>
                 </div>
             </div>
 

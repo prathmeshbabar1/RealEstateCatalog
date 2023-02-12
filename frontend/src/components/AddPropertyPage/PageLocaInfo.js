@@ -7,8 +7,10 @@ import "../PropertyComponent/BasicInfo.css"
 import "../Dashboard/Home.css"
 import LocationInfo from '../PropertyComponent/LocationInfo';
 
-const  PageLocationInfo= () => {
-
+const  PageLocationInfo= (props) => {
+let property = props.property;
+let area = props.area;
+let contact = props.contact
     return (
         <div className="home">
             <div className="side-nav">
@@ -18,7 +20,7 @@ const  PageLocationInfo= () => {
                 <UpperNav />
                 <div className='dashboard'>
                 <Menubar/>
-                <LocationInfo/>
+                <LocationInfo property={property} area={area} contact={contact}/>
                 </div>
             </div>
 
