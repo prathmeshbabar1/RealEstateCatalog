@@ -1,39 +1,57 @@
+const express = require('express')
 const router = require('express').Router()
-
+const bcrypt = require('bcrypt')
 const User = require("../models/User");
+const jwt = require("jsonwebtoken")
 
-const { body, validationResult } = require('express-validator');
-router.get('/', body('email').isEmail(),
-    body('password').isLength({ min: 5 }), async (req, res) => {
-        const { email,  password } = req.body;
+const secret = "realEstate"
 
+router.use(express.json())
+router.use(express.urlencoded())
 
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() });
-        }
+router.post('/login', async (req, res) => {
 
-        try {
-            const findQueryinDB = await User.findOne({ email: email });
+    try {
+        const { email, password } = req.body;
+        const findQueryinDB = await User.findOne({ email: email });
+        console.log(req.body)
 
-            if (findQueryinDB) {
-                //  for passwordvallidation
+        if (!findQueryinDB) {
+            return res.status(404).json({
+                status: "Error",
+                message: "User isn't register"
+            });
 
-            } else {
-                return res.status(403).json({
-                    status: "Error",
-                    message: "User isn't register"
-                });
-            }
-        } catch (error) {
-            console.log(error.message)
-            res.status(400).json({
-                status: "invalid user",
-                message: error
+        } else {
+            //  for passwordvallidation
+            console.log(req.body)
+            bcrypt.compare(password, findQueryinDB.password, (err, result) => {
+                console.log(result, "from bcrypt")
+                if (!result) {
+                    return res.status(403).json({
+                        status: "Failed",
+                        message: "Invalid User Password"
+                    })
+                }
+                else {
+                    const token = jwt.sign({
+                        exp: Math.floor(Date.now() / 1000) + (60 * 60 * 60 * 60),
+                        findQueryinDB: findQueryinDB._id
+                    }, secret);
 
+                    const userdetails = { ...findQueryinDB._doc, password: undefined }
+                    return res.status(200).json({
+                        status: "Success",
+                        message: { token, userdetails }
+                    })
+                }
             })
+
         }
-    })
 
+    } catch (err) {
+        console.log(err)
+    }
+})
 
-module.exports = router;
+module.exports = router

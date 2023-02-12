@@ -14,13 +14,11 @@ const PropertySchema= new mongoose.Schema({
     },
     views:{
         type:String,
-        required:true
     },
     daysleft:{
         type:String,
-        required:true
     }
 
 })
-const propertyModel=mongoose.model("PropertyDetails",PropertySchema)
+const propertyModel=mongoose.model("propertydetails",PropertySchema)
 module.exports=propertyModel
