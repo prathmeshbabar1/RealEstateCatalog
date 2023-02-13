@@ -4,7 +4,7 @@
     /* left: 25%; */
     right: 5%;
     width: 70%;
-    height: 62%;
+    height: 63%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
 
 
 #formContainerForPropertyDetails {
-    height: 100%;
+    height: 120%;
 }
 
 #formContainerForGeneralInfo {
@@ -29,7 +29,7 @@
 
 .column {
     display: grid;
-    gap: 12%;
+    gap: 8%;
     width: 25%;
     background-color: inherit;
     padding: 2%;
@@ -78,8 +78,8 @@
     background: #FFFFFF;
 
     position: relative;
-    left: 40.88%;
-    top: 80.07%;
+    left: 36.88%;
+    top: 52.07%;
     display: flex;
     gap: 4%;
     
@@ -108,7 +108,7 @@ button {
 }
 
 #buttonsForPropertyDetails {
-    top: 145.07%;
+    top: 87.07%;
     background-color: inherit;
     background: #FFFFFF;
 
@@ -116,7 +116,7 @@ button {
 }
 
 #buttonsForGeneralInfo {
-    top: 83.07%;
+    top: 46.07%;
     background-color: inherit;
     background: #FFFFFF;
 
@@ -133,4 +133,7 @@ button {
     background-color: inherit;
 
     background: #4C57B6;
+}
+a{
+    text-decoration: none;
 }

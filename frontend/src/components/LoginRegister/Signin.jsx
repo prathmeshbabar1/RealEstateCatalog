@@ -21,7 +21,7 @@ const Signin = () => {
       },
       body: JSON.stringify(data),
     })
-      .then((res) => {
+    .then((res) => {
         return res.json();
       })
       .then((result) => {
@@ -33,7 +33,11 @@ const Signin = () => {
         } else {
           setErr("");
           const token = result.message.token;
+          console.log(result.message.userdetails)
+          console.log(result.message.token)
           JSON.stringify(localStorage.setItem("token", token));
+          JSON.stringify(localStorage.setItem("user",JSON.stringify(result.message.userdetails)));
+         
           navigate("/properties");
         }
       })

@@ -4,23 +4,34 @@ import { useNavigate } from 'react-router-dom';
 
 
 const UpperNav = () => {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const [log, setLogout] = useState(false)
-    const handleLog=()=>{
+    const handleLog = () => {
+        console.log(localStorage.getItem("user"))
         localStorage.removeItem("token");
+        localStorage.removeItem("user");
+
         navigate("/login")
     }
+let user=localStorage.getItem("user")
+user=(JSON.parse(user).email)
+console.log(user)
     return (
+    
         <>
             <div className="upper-nav">
-                <p>USER ID:O2PPD125</p>
+                <p>USER ID:{Math.floor(Math.random() * 99) +
+                    "PPD" +
+                    Math.floor(Math.random() * 999 + 999)}</p>
                 <p className='account'>
                     <span>
                         <span className='account-icon'><BsPerson /></span>
-                        <span> USER Name</span>
-                        <span><BsChevronDown onClick={() => {setLogout(true) }} /></span>
+                        <span className='account-name'>{user}</span>
+                        <span><BsChevronDown 
+                        onClick={() => {log?setLogout(false):setLogout(true) }} 
+                        /></span>
                     </span>
-                    {log && <span className='logout-option' style={{flexDirection:"row"}} onClick={()=>{setLogout(false);handleLog()}} >logout</span>}
+                    {log && <p className='logout-option' onClick={() => { setLogout(false); handleLog() }} >Logout</p>}
                 </p>
             </div>
 

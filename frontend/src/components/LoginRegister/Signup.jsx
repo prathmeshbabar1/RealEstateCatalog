@@ -6,7 +6,7 @@ const Signup = () => {
   const [err, setErr] = useState("");
   const [data, setData] = useState({
     email: "",
-    password: "",
+    password: ""
   });
   const [confirmPassword, setConfirmPassword] = useState("");
   const submitHandler = async (e) => {
@@ -17,7 +17,7 @@ const Signup = () => {
     }
     //setErr("")
     else if (confirmPassword === data.password) {
-      {
+      
         setErr("");
         if (data.password.length < 7) {
           setErr("Password length should be minimum 6 characters");
@@ -46,7 +46,7 @@ const Signup = () => {
             console.log(err);
           });
       }
-    } else {
+     else {
       setErr("password should match");
     }
   };

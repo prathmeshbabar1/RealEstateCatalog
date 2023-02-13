@@ -15,10 +15,10 @@ userRoutes.use(fileUpload());
 // views  dayLeft
 userRoutes.post("/property", async (req, res) => {
     console.log(req.body);
-    const { property, contact, area, views, daysleft } = req.body;
+    const { property, contact, area, views, daysleft,status} = req.body;
     // console.log(property);
     try {
-        const propertyDetails = await PropertyDetails.create({ property: property, contact: contact, area: area, views: views, daysleft: daysleft });
+        const propertyDetails = await PropertyDetails.create({ property: property, contact: contact, area: area, views: views, daysleft: daysleft ,status:status});
         res.status(200).json({
             status: "successfully created propertyDetails",
             propertyDetails

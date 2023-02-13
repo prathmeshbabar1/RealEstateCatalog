@@ -3,16 +3,19 @@ import "./BasicInfo.css"
 // import { useState } from "react";
 import { useEffect } from "react";
 
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
+// import { useState } from "react";
 
 const LocationInfo = (props) => {
     let blueColorUrl = window.location.href
+    // const [sold,setSold]=useState("Sold")
     useEffect(() => {
-        // console.log( blueColorUrl);
+        // uploadPost()
       },[blueColorUrl]);
     let Views = Math.floor(Math.random()*100);
     // let Daysleft = Math.floor(Math.random()*100);
     let Daysleft ="6"
+    let sold="Sold"
     const uploadPost = (e) => {
         // e.preventDefault();
         const formData = new FormData();
@@ -21,6 +24,8 @@ const LocationInfo = (props) => {
         formData.append("area", props.area);
         formData.append("views", Views);
         formData.append("daysleft",Daysleft)
+        formData.append("status",sold)
+
         for (const [key, value] of formData.entries()) {
             console.log(key, value);
           }
