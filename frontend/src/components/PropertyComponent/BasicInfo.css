@@ -76,13 +76,11 @@
     flex-direction: row;
     /* background-color: inherit; */
     background: #FFFFFF;
-
     position: relative;
     left: 36.88%;
     top: 52.07%;
     display: flex;
     gap: 4%;
-    
     width: 37%;
 }
 
@@ -108,24 +106,19 @@ button {
 }
 
 #buttonsForPropertyDetails {
-    top: 87.07%;
+   top: 87.07%;
     background-color: inherit;
     background: #FFFFFF;
-
-
 }
 
 #buttonsForGeneralInfo {
     top: 46.07%;
     background-color: inherit;
     background: #FFFFFF;
-
-
 }
 
 .button1 {
     background-color: inherit;
-
     background: #6AB4F8;
 }
 

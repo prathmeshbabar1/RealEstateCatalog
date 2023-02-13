@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require("mongoose");
 const app=express();
@@ -57,5 +56,3 @@ app.use('/*', (req, res) => {
 
 //server listening
 app.listen(port, () => { console.log(`app is running at ${port}`); })
-
-

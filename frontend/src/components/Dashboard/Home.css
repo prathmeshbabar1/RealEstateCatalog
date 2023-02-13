@@ -79,6 +79,16 @@ body {
 }
 .logout-option{
   margin-top: 0.5em;
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  /* font-weight: 700; */
+  cursor: pointer;
+}
+.logout-option{
+  margin-top: 0.5eem;
   /* width: 100%; */
 }
 .dashboard {
@@ -173,6 +183,15 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #afeee1;
+#scrollbar{
+  overflow-y: scroll;
+}
+.property-lists table {
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2.8rem;
+  flex-direction: column;
 }
 .property-lists tr{
   display: flex;
