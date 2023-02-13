@@ -25,9 +25,11 @@ router.post('/login', async (req, res) => {
         } else {
             //  for passwordvallidation
             console.log(req.body)
+
             //privacy
             bcrypt.compare(password, findQueryinDB.password, (err, result) => {
                 //authentication process by bcrypt
+
                 console.log(result, "from bcrypt")
                 if (!result) {
                     return res.status(403).json({
@@ -62,3 +64,4 @@ module.exports = router
 
 //token is used to authenticate the user for subsequent requests 
 //and provides a secure way to transmit information between the client and server.
+

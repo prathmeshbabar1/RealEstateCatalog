@@ -1,9 +1,7 @@
 import React from "react";
 import "./BasicInfo.css"
-// import { useState } from "react";
 import { useEffect } from "react";
-
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
 
 const LocationInfo = (props) => {
     let blueColorUrl = window.location.href
@@ -11,8 +9,8 @@ const LocationInfo = (props) => {
         // console.log( blueColorUrl);
       },[blueColorUrl]);
     let Views = Math.floor(Math.random()*100);
-    // let Daysleft = Math.floor(Math.random()*100);
     let Daysleft ="6"
+    let sold="Sold"
     const uploadPost = (e) => {
         // e.preventDefault();
         const formData = new FormData();
@@ -21,10 +19,12 @@ const LocationInfo = (props) => {
         formData.append("area", props.area);
         formData.append("views", Views);
         formData.append("daysleft",Daysleft)
+        formData.append("status",sold)
+
         for (const [key, value] of formData.entries()) {
             console.log(key, value);
           }
-console.log(props.property);
+            console.log(props.property);
         fetch("http://localhost:8080/api/property",
             {
                 method: 'POST',
