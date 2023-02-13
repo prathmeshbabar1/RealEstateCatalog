@@ -14,7 +14,7 @@ const Signin = () => {
     }
     console.log(data);
     setErr("");
-    fetch("http://localhost:8080/login", {
+    fetch("https://realestatecatalog.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -23,7 +23,7 @@ const Signup = () => {
           setErr("Password length should be minimum 6 characters");
           return;
         }
-        fetch("http://localhost:8080/register", {
+        fetch("https://realestatecatalog.onrender.com/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),

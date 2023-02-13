@@ -18,22 +18,22 @@ const Manubar = (props)=> {
          let state3 = false;
          let state4 = false;
     // const [state,setState]= useState('');
-    if (state==="http://localhost:3000/basic") {
+    if (state==="https://realestatecatalog.onrender.com/basic") {
         state1 = true;
         state2 = false;
         state3 = false;
        state4 = false;
-      } else if  (state==="http://localhost:3000/details") {
+      } else if  (state==="https://realestatecatalog.onrender.com/details") {
         state1 = false;
         state2 = true;
         state3 = false;
        state4 = false;
-      } else if  (state==="http://localhost:3000/general") {
+      } else if  (state==="https://realestatecatalog.onrender.com/general") {
         state1 = false;
         state2 = false;
         state3 = true;
        state4 = false;
-      } else if(state==="http://localhost:3000/location"){
+      } else if(state==="https://realestatecatalog.onrender.com/location"){
         state1 = false;
          state2 = false;
          state3 = false;

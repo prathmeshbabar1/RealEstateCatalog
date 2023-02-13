@@ -8,7 +8,7 @@ const [searchData,getData]=useState([])
 const searchHandel=async()=>{
     if(searchKey){
         if(searchKey){
-            let result=await fetch(`http://localhost:8080/search/${searchKey}`)
+            let result=await fetch(`https://realestatecatalog.onrender.com/search/${searchKey}`)
             result=await result.json()
             getData(result)
             console.log(result)
