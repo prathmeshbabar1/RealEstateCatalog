@@ -11,7 +11,7 @@ const search=require("./routes/Search")
 const soldStatus=require("./routes/updateSoldStatus")
 
 const loginRoutes = require('./routes/login')
-const userRoute=require("./routes/PostPrperty")
+const userRoute=require("./routes/PostProperty")
 const registerRoutes = require('./routes/register');
 
 
