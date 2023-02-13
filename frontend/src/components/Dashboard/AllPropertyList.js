@@ -10,17 +10,11 @@ const AllpropertyList = () => {
     const [propertyList, updateList] = useState([])
     const [key,getKey]=useState("")
     // const navigate=useNavigate()
-    // const [sold, setUnsold] = useState(true)
-    // const clickedSold = () => {
-    //     if (sold) {
-    //         setUnsold(false)
-    //     }
-    // }
+    const [sold, setUnsold] = useState(true)
 
     useEffect(() => {
         getPropertyList()
         updateStatus()
-
     },[])
 
     const getPropertyList = async () => {
@@ -28,8 +22,9 @@ const AllpropertyList = () => {
         const allData = await result.json()
         updateList(allData)
     }
-    const searchHandel = async () => {
-        // let key = event.target.value
+
+    const searchHandel = async (event) => {
+        let key = event.target.value
         if (key) {
             let result = await fetch(`http://localhost:8080/search/${key}`)
             result = await result.json()
@@ -51,20 +46,15 @@ const AllpropertyList = () => {
                 "Content-Type": "application/json"
             }
         });
-        result = await result.json()
-        
+        result = await result.json()       
         console.log(result)
-
         // getPropertyList()
         if(result){
             getPropertyList()
             // navigate("/properties")
             // up
         }
-
-
     }
-
     return (
 
         <div className="dashboard">
@@ -74,6 +64,7 @@ const AllpropertyList = () => {
                         getKey(e.target.value);
                         searchHandel()
                         }} />
+                    <input className="search-input" type="text" placeholder="search PPD ID" onChange={searchHandel} />
                     <span className="border-left-line" onClick={searchHandel}><HiSearch className='search-icon' /></span>
                 </span>
                 <Link to={"/basic"}
@@ -107,6 +98,9 @@ const AllpropertyList = () => {
                                     return (
                                         <tr key={data._id}>
                                             <td>{`PPD${+ppid+1000}`}</td>
+                                    return (
+                                        <tr key={data._id}>
+                                            <td>{`PPD${parseInt(Math.random() * 9000 + 1000)}`}</td>
                                             <td className="gray-color"><MdPhotoLibrary /></td>
                                             <td>{data.property}</td>
                                             <td>{data.contact}</td>
@@ -116,7 +110,11 @@ const AllpropertyList = () => {
                                             onClick={()=>{updateStatus(data._id)}}>
                                                 {data.status}
                                             </button></td>
-
+                                            <td><button className="action-btn" onClick={()=>{
+                                                if(sold){
+                                                    setUnsold(false)
+                                                }
+                                            }}>{sold ? "sold" : "unsold"}</button></td>
                                             <td>{parseInt(Math.random() *90 + 10)}</td>
                                             <td><span className="gray-color action"><HiEye className="view-icon" /><MdModeEdit /></span></td>
                                         </tr>

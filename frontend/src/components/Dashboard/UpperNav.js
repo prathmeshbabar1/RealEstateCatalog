@@ -10,7 +10,6 @@ const UpperNav = () => {
         console.log(localStorage.getItem("user"))
         localStorage.removeItem("token");
         localStorage.removeItem("user");
-
         navigate("/login")
     }
 let user=localStorage.getItem("user")
@@ -32,6 +31,23 @@ console.log(user)
                         /></span>
                     </span>
                     {log && <p className='logout-option' onClick={() => { setLogout(false); handleLog() }} >Logout</p>}
+    const navigate=useNavigate()
+    const [log, setLogout] = useState(false)
+    const handleLog=()=>{
+        localStorage.removeItem("token");
+        navigate("/login")
+    }
+    return (
+        <>
+            <div className="upper-nav">
+                <p>USER ID:O2PPD125</p>
+                <p className='account'>
+                    <span>
+                        <span className='account-icon'><BsPerson /></span>
+                        <span> USER Name</span>
+                        <span><BsChevronDown onClick={() => {setLogout(true) }} /></span>
+                    </span>
+                    {log && <span className='logout-option' style={{flexDirection:"row"}} onClick={()=>{setLogout(false);handleLog()}} >logout</span>}
                 </p>
             </div>
 
