@@ -1,3 +1,0 @@
-"- Implement an API to register a new user
-- Implement an API login existing user
-- Find out and implement the technique to invalidate a user's authentication (log out workflow)"
