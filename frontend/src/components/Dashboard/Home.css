@@ -169,6 +169,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #afeee1;
   border-radius: 5px;
+  
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #afeee1;
