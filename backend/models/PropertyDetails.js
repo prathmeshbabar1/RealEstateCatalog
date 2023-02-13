@@ -17,6 +17,9 @@ const PropertySchema= new mongoose.Schema({
     },
     daysleft:{
         type:String,
+    },
+    status:{
+        type:String,
     }
 
 })
