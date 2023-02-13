@@ -10,6 +10,7 @@ html {
 }
 body {
   background: #afeee1;
+  /* overflow:hidden; */
 }
 .home {
   display: flex;
@@ -58,8 +59,27 @@ body {
   background-color: #f5f5f5;
 }
 .account {
-
-  width: 110px;
+  width: 200px;
+  align-items: center;
+  cursor: pointer;
+}
+.account p{
+  /* border: 1px solid rebeccapurple; */
+  border-radius: 0 0 5px 5px;
+  position:absolute;
+  left: 83%;
+    top: 7%;
+    padding: 0.3em 3.9rem;
+  background: #ffffff;
+  color:#494d4c;
+  font-weight: 700;
+}
+.account .account-name{
+  padding: 0 0.5em 0.5em;
+}
+.logout-option{
+  margin-top: 0.5em;
+  width: 162px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +93,7 @@ body {
 }
 .dashboard {
   width: 100%;
-  height: 88%;
+  height: 150vh;
   background-color: #f5f5f5;
   margin-top: 0.2rem;
 }
@@ -134,15 +154,35 @@ body {
 }
 
 /* all property lists @@@@@ */
-#scrollbar{
-  overflow-y: scroll;
-}
 .property-lists table {
-  overflow: auto;
-  display: flex;
+   display: flex;
   justify-content: space-between;
-  margin: 0 2.8rem;
+  margin: 0 0.6rem 0 3rem ;
   flex-direction: column;
+}
+.property-lists table tr td{
+  text-align: center;
+}
+
+.property-lists{
+  height: 31rem;
+  overflow-y: scroll;
+  width: 96%;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #afeee2;
+  border-radius: 5px;
+  
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #afeee1;
 }
 .property-lists tr{
   display: flex;

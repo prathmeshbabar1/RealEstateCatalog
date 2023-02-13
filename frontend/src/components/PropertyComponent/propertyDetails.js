@@ -20,7 +20,6 @@ let blueColorUrl = window.location.href
     return (
 
         <>
-        <section className="container">
             <form className="formContainer" id="formContainerForPropertyDetails"  >
            
                 <section className="column">
@@ -130,9 +129,7 @@ let blueColorUrl = window.location.href
             <Link to='/basic'>    <button  onClick={handleClick}   className="button1">Previous</button></Link>  
                 <Link to='/general'> <button onClick={handleClick} className="button2">Save & Continue</button></Link> 
 
-         
             </section>
-         </section>
         </>
     )
 }

@@ -8,15 +8,13 @@ import { Link } from "react-router-dom";
 const AllpropertyList = () => {
 
     const [propertyList, updateList] = useState([])
-    const [sold, setUnsold] = useState(true)
-    // const clickedSold = () => {
-    //     if (sold) {
-    //         setUnsold(false)
-    //     }
-    // }
+    // const [key,getKey]=useState("")
+    // const navigate=useNavigate()
+    // const [sold, setUnsold] = useState(true)
 
     useEffect(() => {
         getPropertyList()
+        // updateStatus()
     },[])
 
     const getPropertyList = async () => {
@@ -24,6 +22,7 @@ const AllpropertyList = () => {
         const allData = await result.json()
         updateList(allData)
     }
+
     const searchHandel = async (event) => {
         let key = event.target.value
         if (key) {
@@ -37,6 +36,25 @@ const AllpropertyList = () => {
         }
     }
 
+    const updateStatus= async(id)=>{
+        // console.log(name, price, company, category)
+        let status="Unsold"
+        let result = await fetch(`http://localhost:8080/properties/${id}`, {
+            method: "put",
+            body: JSON.stringify({status}),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        result = await result.json()       
+        console.log(result)
+        // getPropertyList()
+        if(result){
+            getPropertyList()
+            // navigate("/properties")
+            // up
+        }
+    }
     return (
 
         <div className="dashboard">
@@ -70,20 +88,21 @@ const AllpropertyList = () => {
                         {
                             propertyList.length > 0 ?
                                 propertyList.map((data, index) => {
+                                    let ppid=data._id
+                                    ppid=ppid.match(/\d+/g)
+                                    ppid=ppid[0]
                                     return (
                                         <tr key={data._id}>
-                                            <td>{`PPD${parseInt(Math.random() * 9000 + 1000)}`}</td>
+                                            <td>{`PPD${+ppid+1000}`}</td>
                                             <td className="gray-color"><MdPhotoLibrary /></td>
                                             <td>{data.property}</td>
                                             <td>{data.contact}</td>
                                             <td>{data.area}</td>
                                             <td>{data.views}</td>
-                                            <td><button className="action-btn" onClick={()=>{
-                                                if(sold){
-                                                    setUnsold(false)
-                                                }
-                                            }}>{sold ? "sold" : "unsold"}</button></td>
-
+                                            <td><button className="action-btn" 
+                                            onClick={()=>{updateStatus(data._id)}}>
+                                                {data.status}
+                                            </button></td>
                                             <td>{parseInt(Math.random() *90 + 10)}</td>
                                             <td><span className="gray-color action"><HiEye className="view-icon" /><MdModeEdit /></span></td>
                                         </tr>

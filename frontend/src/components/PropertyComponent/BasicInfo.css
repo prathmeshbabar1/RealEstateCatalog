@@ -154,7 +154,7 @@ background: #6AB4F8;
 box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.13);
 }
 .vector{
-    background-image: url('../../../public/photo_camera.JPEG');
+    background-image: url('./photo_camera.JPEG');
     background-repeat: no-repeat;
     position: absolute;
     left: 20.31%;

@@ -1,7 +1,5 @@
 import React from 'react';
 import Sidenav from '../Dashboard/Sidenav';
-import { useState } from 'react';
-
 import UpperNav from '../Dashboard/UpperNav';
 import BasicInfo from '../PropertyComponent/Basicinfo';
 import "../PropertyComponent/BasicInfo.css"

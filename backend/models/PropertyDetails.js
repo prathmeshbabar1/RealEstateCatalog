@@ -17,8 +17,12 @@ const PropertySchema= new mongoose.Schema({
     },
     daysleft:{
         type:String,
+    },
+    status:{
+        type:String,
     }
 
 })
 const propertyModel=mongoose.model("propertydetails",PropertySchema)
+
 module.exports=propertyModel

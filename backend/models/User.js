@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose')
 
 const { Schema } = mongoose;
@@ -8,6 +7,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    ppdId: String,
     email: {
         type: String,
         required: true
