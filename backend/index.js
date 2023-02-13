@@ -13,8 +13,8 @@ const userRoute=require("./routes/PostPrperty")
 const registerRoutes = require('./routes/register');
 
 //connected to db
-const uri='mongodb://localhost/RealEstate'
-//const uri="mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/userdb?retryWrites=true&w=majority'"
+//const uri='mongodb://localhost/RealEstate'
+const uri='mongodb+srv://prathmesh:prathmesh@cluster0.jdolkoc.mongodb.net/realestate?retryWrites=true&w=majority'
 const conn=async()=>{
   await mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
         if (err) {

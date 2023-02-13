@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 router.post("/register", async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log("data from froentend",req.body)
+    console.log("data from frontend",req.body)
     if (!email || !password) {
       return res.status(400).json({ message: "Please enter all fields" });
     }
@@ -17,8 +17,10 @@ router.post("/register", async (req, res) => {
       Math.floor(Math.random() * 99) +
       "PPD" +
       Math.floor(Math.random() * 999 + 999);
-//privacy maintain
+
+//for hashing and storing passowrd securely
     bcrypt.hash(password, 10, async (err, cryptedPassword) => {
+      //creating colletion using model user 
       const newUser = await User.create({
         email: email,
         password: cryptedPassword,
