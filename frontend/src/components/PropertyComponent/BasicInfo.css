@@ -13,6 +13,10 @@
     background: #FFFFFF;
     border: 1px solid #f0dfdf;
 }
+.container{
+    height: 154%;
+   background: #F5F5F5;
+}
 
 
 /* .blue-color{
@@ -20,7 +24,7 @@
 
 
 #formContainerForPropertyDetails {
-    height: 120%;
+    height: 110%;
 }
 
 #formContainerForGeneralInfo {
@@ -33,6 +37,7 @@
     width: 25%;
     background-color: inherit;
     padding: 2%;
+    flex-basis: 73%;
 }
 
 .WideInput {
@@ -49,7 +54,7 @@
     font-size: 18px;
     line-height: 23px;
     background-color: inherit;
-    /* color: #7D7D7D; */
+    color: #7D7D7D;
 
 }
 
@@ -59,7 +64,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
-
+    color: #7D7D7D;
     /* color: #7D7D7D; */
     background-color: inherit;
 }
@@ -76,11 +81,13 @@
     flex-direction: row;
     /* background-color: inherit; */
     background: #FFFFFF;
+
     position: relative;
-    left: 36.88%;
-    top: 52.07%;
+    left: 30.88%;
+    top: 53.07%;
     display: flex;
     gap: 4%;
+    
     width: 37%;
 }
 
@@ -106,26 +113,53 @@ button {
 }
 
 #buttonsForPropertyDetails {
-   top: 87.07%;
+    top: 95.07%;
     background-color: inherit;
     background: #FFFFFF;
+
+
 }
 
 #buttonsForGeneralInfo {
-    top: 46.07%;
+    top: 83.07%;
     background-color: inherit;
     background: #FFFFFF;
+
+
 }
 
 .button1 {
     background-color: inherit;
+    cursor: pointer;
     background: #6AB4F8;
 }
 
 .button2 {
     background-color: inherit;
+    cursor: pointer;
     background: #4C57B6;
 }
 a{
     text-decoration: none;
+}
+.image{
+    position: absolute;
+left: 28.31%;
+right: 66.92%;
+top: 78.93%;
+bottom: 10.94%;
+border: #6AB4F8;
+border-radius: 46%;
+background: #6AB4F8;
+box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.13);
+}
+.vector{
+    background-image: url('./photo_camera.JPEG');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20.31%;
+    height: 40px;
+    width: 40px;
+    right: 69.82%;
+    top: 22%;
 }

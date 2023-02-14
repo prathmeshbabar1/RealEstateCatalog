@@ -8,13 +8,13 @@ import { Link } from "react-router-dom";
 const AllpropertyList = () => {
 
     const [propertyList, updateList] = useState([])
-    const [key,getKey]=useState("")
+    // const [key,getKey]=useState("")
     // const navigate=useNavigate()
-    const [sold, setUnsold] = useState(true)
+    // const [sold, setUnsold] = useState(true)
 
     useEffect(() => {
         getPropertyList()
-        updateStatus()
+        // updateStatus()
     },[])
 
     const getPropertyList = async () => {
@@ -60,10 +60,6 @@ const AllpropertyList = () => {
         <div className="dashboard">
             <div className="search-addProperty">
                 <span className="search-bar">
-                    <input className="search-input" type="text" placeholder="search PPD ID" onChange={(e)=>{
-                        getKey(e.target.value);
-                        searchHandel()
-                        }} />
                     <input className="search-input" type="text" placeholder="search PPD ID" onChange={searchHandel} />
                     <span className="border-left-line" onClick={searchHandel}><HiSearch className='search-icon' /></span>
                 </span>
@@ -98,9 +94,6 @@ const AllpropertyList = () => {
                                     return (
                                         <tr key={data._id}>
                                             <td>{`PPD${+ppid+1000}`}</td>
-                                    return (
-                                        <tr key={data._id}>
-                                            <td>{`PPD${parseInt(Math.random() * 9000 + 1000)}`}</td>
                                             <td className="gray-color"><MdPhotoLibrary /></td>
                                             <td>{data.property}</td>
                                             <td>{data.contact}</td>
@@ -110,11 +103,6 @@ const AllpropertyList = () => {
                                             onClick={()=>{updateStatus(data._id)}}>
                                                 {data.status}
                                             </button></td>
-                                            <td><button className="action-btn" onClick={()=>{
-                                                if(sold){
-                                                    setUnsold(false)
-                                                }
-                                            }}>{sold ? "sold" : "unsold"}</button></td>
                                             <td>{parseInt(Math.random() *90 + 10)}</td>
                                             <td><span className="gray-color action"><HiEye className="view-icon" /><MdModeEdit /></span></td>
                                         </tr>
