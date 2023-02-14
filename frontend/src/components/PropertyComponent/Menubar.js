@@ -18,22 +18,22 @@ const Manubar = (props)=> {
          let state3 = false;
          let state4 = false;
     // const [state,setState]= useState('');
-    if (state==="https://main--cosmic-jelly-4370b1.netlify.app/basic") {
+    if (state==="https://real-estate-prathmesh.netlify.app/basic") {
         state1 = true;
         state2 = false;
         state3 = false;
        state4 = false;
-      } else if  (state==="https://main--cosmic-jelly-4370b1.netlify.app/details") {
+      } else if  (state==="https://real-estate-prathmesh.netlify.app/details") {
         state1 = false;
         state2 = true;
         state3 = false;
        state4 = false;
-      } else if  (state==="https://main--cosmic-jelly-4370b1.netlify.app/general") {
+      } else if  (state==="https://real-estate-prathmesh.netlify.app/general") {
         state1 = false;
         state2 = false;
         state3 = true;
        state4 = false;
-      } else if(state==="https://main--cosmic-jelly-4370b1.netlify.app/location"){
+      } else if(state==="https://real-estate-prathmesh.netlify.app/location"){
         state1 = false;
          state2 = false;
          state3 = false;

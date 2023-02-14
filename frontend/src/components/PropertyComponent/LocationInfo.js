@@ -25,7 +25,7 @@ const LocationInfo = (props) => {
             console.log(key, value);
           }
             console.log(props.property);
-        fetch("https://realestate-suryakant.onrender.com/api/property",
+        fetch("https://realestatecatalog.onrender.com/api/property",
             {
                 method: 'POST',
                 body: formData
