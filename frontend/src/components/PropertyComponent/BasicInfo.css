@@ -84,7 +84,7 @@
 
     position: relative;
     left: 40.88%;
-    top: 92.07%;
+    top: 52.07%;
     display: flex;
     gap: 4%;
     
@@ -113,7 +113,7 @@ button {
 }
 
 #buttonsForPropertyDetails {
-    top: 95.07%;
+    top: 85.07%;
     background-color: inherit;
     background: #FFFFFF;
 
@@ -121,7 +121,7 @@ button {
 }
 
 #buttonsForGeneralInfo {
-    top: 83.07%;
+    top: 47.07%;
     background-color: inherit;
     background: #FFFFFF;
 

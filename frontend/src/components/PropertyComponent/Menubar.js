@@ -18,22 +18,22 @@ const Manubar = (props)=> {
          let state3 = false;
          let state4 = false;
     // const [state,setState]= useState('');
-    if (state==="https://realestatecatalog.onrender.com/basic") {
+    if (state==="https://main--cosmic-jelly-4370b1.netlify.app/basic") {
         state1 = true;
         state2 = false;
         state3 = false;
        state4 = false;
-      } else if  (state==="https://realestatecatalog.onrender.com/details") {
+      } else if  (state==="https://main--cosmic-jelly-4370b1.netlify.app/details") {
         state1 = false;
         state2 = true;
         state3 = false;
        state4 = false;
-      } else if  (state==="https://realestatecatalog.onrender.com/general") {
+      } else if  (state==="https://main--cosmic-jelly-4370b1.netlify.app/general") {
         state1 = false;
         state2 = false;
         state3 = true;
        state4 = false;
-      } else if(state==="https://realestatecatalog.onrender.com/location"){
+      } else if(state==="https://main--cosmic-jelly-4370b1.netlify.app/location"){
         state1 = false;
          state2 = false;
          state3 = false;
