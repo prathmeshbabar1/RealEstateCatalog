@@ -18,7 +18,7 @@ const AllpropertyList = () => {
     },[])
 
     const getPropertyList = async () => {
-        const result = await fetch("https://realestate-darshan.onrender.com/properties")
+        const result = await fetch("https://realestate-suryakant.onrender.com/properties")
         const allData = await result.json()
         updateList(allData)
     }
@@ -26,7 +26,7 @@ const AllpropertyList = () => {
     const searchHandel = async (event) => {
         let key = event.target.value
         if (key) {
-            let result = await fetch(`https://realestate-darshan.onrender.com/search/${key}`)
+            let result = await fetch(`https://realestate-suryakant.onrender.com/search/${key}`)
             result = await result.json()
             updateList(result)
             console.log(result)
@@ -39,7 +39,7 @@ const AllpropertyList = () => {
     const updateStatus= async(id)=>{
         // console.log(name, price, company, category)
         let status="Unsold"
-        let result = await fetch(`https://realestate-darshan.onrender.com/properties/${id}`, {
+        let result = await fetch(`https://realestate-suryakant.onrender.com/properties/${id}`, {
             method: "put",
             body: JSON.stringify({status}),
             headers: {

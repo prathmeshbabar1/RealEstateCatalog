@@ -14,7 +14,7 @@ const Signin = () => {
     }
     console.log(data);
     setErr("");
-    fetch("https://realestate-darshan.onrender.com/login", {
+    fetch("https://realestate-suryakant.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
